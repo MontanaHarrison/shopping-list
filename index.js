@@ -12,18 +12,11 @@ $(function(){
         $('.shopping-list').append(string).val();
     });
 
-    $('.shopping-item-toggle').click(function(){
-       $('.shopping-item').toggleClass('shopping-item__checked');
-
-
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(){
+       $(this).closest('li').toggleClass('shopping-item__checked');
     });
 
-    $('.shopping-item-delete').click(function(){
-        $('li').remove();
-        
-
-
+    $('.shopping-list').on('click', '.shopping-item-delete', function(){
+       $(this).closest("li").remove();
     });
-
-  
 });
